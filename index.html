@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>00622 - CET</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Saltar para o conteúdo principal</a>
+
+  <header role="banner">
+    <h1>HTML, CSS, JavaScript</h1>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="intro">
+      <p>Bem-vindo ao formulário de HTML, CSS e JavaScript.</p>
+    </section>
+
+    <section class="form-section">
+      <h2>Formulário de Saudação</h2>
+      <form id="form-greeting" novalidate aria-describedby="form-hint">
+        <p id="form-hint" class="hint-text">Os campos Nome e Período do dia são obrigatórios.</p>
+        <div class="field">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" placeholder="O teu nome" autocomplete="name" required
+            aria-required="true" />
+        </div>
+        <div class="field">
+          <label for="period">Período do dia:</label>
+          <select id="period" name="period" required aria-required="true">
+            <option value="" selected disabled>Seleciona</option>
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="age">Idade:</label>
+          <input type="number" id="age" name="age" placeholder="A tua idade" min="1" max="120" inputmode="numeric" />
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div id="message" class="message hidden" role="status" aria-live="polite" aria-atomic="true" tabindex="-1">
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026 Sandro Martins — ATEC CET</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
