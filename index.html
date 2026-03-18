@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>00622 - CET</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
   <a class="skip-link" href="#main-content">Saltar para o conteúdo principal</a>
 
   <header role="banner">
-    <h1>HTML, CSS, JavaScript</h1>
+    <h1 id="main-title">HTML, CSS, JavaScript</h1>
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -21,28 +22,33 @@
     </section>
 
     <section class="form-section">
-      <h2>Formulário de Saudação</h2>
-      <form id="form-greeting" novalidate aria-describedby="form-hint">
-        <p id="form-hint" class="hint-text">Os campos Nome e Período do dia são obrigatórios.</p>
+      <h2>Ficha de preferências do utilizador</h2>
+      <form id="form" novalidate aria-describedby="form-hint">
+        <p id="form-hint" class="hint-text">Os campos Nome e Estação do ano são obrigatórios.</p>
         <div class="field">
           <label for="name">Nome:</label>
           <input type="text" id="name" name="name" placeholder="O teu nome" autocomplete="name" required
             aria-required="true" />
         </div>
         <div class="field">
-          <label for="period">Período do dia:</label>
-          <select id="period" name="period" required aria-required="true">
+          <label for="season">Estação do ano:</label>
+          <select id="season" name="season" required aria-required="true">
             <option value="" selected disabled>Seleciona</option>
-            <option value="manha">Manhã</option>
-            <option value="tarde">Tarde</option>
-            <option value="noite">Noite</option>
+            <option value="verao">Verão</option>
+            <option value="inverno">Inverno</option>
+            <option value="primavera">Primavera</option>
+            <option value="outono">Outono</option>
           </select>
         </div>
         <div class="field">
           <label for="age">Idade:</label>
           <input type="number" id="age" name="age" placeholder="A tua idade" min="1" max="120" inputmode="numeric" />
         </div>
-        <button type="submit">Enviar</button>
+        <div class="actions">
+          <button type="submit">Mostrar dados</button>
+          <button id="btn-clear" type="button">Limpar</button>
+          <button id="btn-style" type="button">Alterar estilo</button>
+        </div>
       </form>
 
       <div id="message" class="message hidden" role="status" aria-live="polite" aria-atomic="true" tabindex="-1">
@@ -51,10 +57,8 @@
   </main>
 
   <footer role="contentinfo">
-    <p>&copy; 2026 Sandro Martins — ATEC CET</p>
+    <p>&copy; 2026 Sandro Martins — ATEC - TPSI</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 
 </html>

@@ -23,10 +23,10 @@ body {
   font-weight: 600;
   text-decoration: none;
   z-index: 1000;
-}
 
-.skip-link:focus {
-  top: 12px;
+  &:focus {
+    top: 12px;
+  }
 }
 
 header {
@@ -34,10 +34,6 @@ header {
   color: #fff;
   padding: 20px 32px;
   text-align: center;
-  background-image: url("assets/atec_logo.png");
-  background-repeat: no-repeat;
-  background-position: 16px center;
-  background-size: 80px auto;
 }
 
 header h1 {
@@ -81,28 +77,33 @@ main {
   display: flex;
   flex-direction: column;
   margin-bottom: 14px;
+
+  label {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  input,
+  select {
+    padding: 8px 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 1rem;
+
+    &:focus {
+      outline: 2px solid #2980b9;
+      outline-offset: 1px;
+    }
+  }
 }
 
-.field label {
-  font-weight: 600;
-  margin-bottom: 4px;
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.field input,
-.field select {
-  padding: 8px 10px;
-  border: 1px solid #bbb;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-.field input:focus,
-.field select:focus {
-  outline: 2px solid #2980b9;
-  outline-offset: 1px;
-}
-
-button[type="submit"] {
+.actions button {
   background-color: #2980b9;
   color: #fff;
   border: none;
@@ -110,10 +111,31 @@ button[type="submit"] {
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
+
+  &:hover {
+    background-color: #1a6a9a;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #0f4e74;
+    outline-offset: 2px;
+  }
 }
 
-button[type="submit"]:hover {
-  background-color: #1a6a9a;
+#btn-clear {
+  background-color: #6c757d;
+
+  &:hover {
+    background-color: #5a6268;
+  }
+}
+
+#btn-style {
+  background-color: #1f8a70;
+
+  &:hover {
+    background-color: #166752;
+  }
 }
 
 .message {
@@ -152,4 +174,56 @@ footer {
   color: #aaa;
   font-size: 0.85rem;
   margin-top: 40px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 1023px) {
+  body {
+    background-color: #e8f5e9;
+  }
+
+  header {
+    padding: 16px 12px;
+    background-position: 10px center;
+    background-size: 60px auto;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 12px;
+  }
+
+  .form-section {
+    padding: 18px;
+  }
+
+  .form-section h2 {
+    font-size: 1.05rem;
+  }
+
+  .hint-text {
+    font-size: 0.95rem;
+  }
+
+  .field input,
+  .field select,
+  .actions button {
+    font-size: 0.95rem;
+  }
+
+  .actions button {
+    width: 100%;
+    padding: 10px 14px;
+  }
+
+  .message {
+    font-size: 0.95rem;
+  }
 }
