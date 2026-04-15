@@ -30,18 +30,6 @@
   </header>
 
   <main id="main-content" tabindex="-1">
-    <section class="content-block">
-      <h2>Checklist de aprendizagem</h2>
-      <p class="hint-text">Progresso: <strong id="course-progress">0/6</strong></p>
-      <div class="course-checklist">
-        <label><input class="course-check" type="checkbox" /> Reconhecer sinais de phishing.</label>
-        <label><input class="course-check" type="checkbox" /> Criar passwords longas e unicas.</label>
-        <label><input class="course-check" type="checkbox" /> Ativar autenticacao de dois fatores.</label>
-        <label><input class="course-check" type="checkbox" /> Atualizar apps e sistema operativo.</label>
-        <label><input class="course-check" type="checkbox" /> Evitar logins em Wi-Fi publico.</label>
-        <label><input class="course-check" type="checkbox" /> Confirmar URLs antes de inserir dados.</label>
-      </div>
-    </section>
 
     <section class="content-block cards-grid">
       <article class="stat-box">
@@ -57,12 +45,39 @@
         <p>Desconfia, verifica e so depois partilha dados pessoais.</p>
       </article>
     </section>
+
+    <section class="content-block">
+      <h2>Checklist de aprendizagem</h2>
+      <p class="hint-text">Progresso: <strong id="course-progress">0/6</strong></p>
+      <div class="course-checklist">
+        <button class="course-check" type="button" aria-pressed="false">Reconhecer sinais de phishing.</button>
+        <button class="course-check" type="button" aria-pressed="false">Criar passwords longas e unicas.</button>
+        <button class="course-check" type="button" aria-pressed="false">Ativar autenticacao de dois fatores.</button>
+        <button class="course-check" type="button" aria-pressed="false">Atualizar apps e sistema operativo.</button>
+        <button class="course-check" type="button" aria-pressed="false">Evitar logins em Wi-Fi publico.</button>
+        <button class="course-check" type="button" aria-pressed="false">Confirmar URLs antes de inserir dados.</button>
+      </div>
+    </section>
+
   </main>
 
   <footer role="contentinfo">
     <p>&copy; 2026 Sandro Martins | Crash Course</p>
   </footer>
 
+  <dialog id="course-complete-modal" class="modal-panel" aria-modal="true" aria-labelledby="course-complete-title">
+    <div class="modal-content">
+      <h2 id="course-complete-title">Checklist completa</h2>
+      <p>Excelente. Queres seguir para o quiz ou explorar mais opcoes?</p>
+      <div class="actions">
+        <button id="btn-course-go-quiz" type="button">Entrar no quiz</button>
+        <button id="btn-course-go-tester" type="button">Testar credenciais</button>
+        <button id="btn-course-modal-close" type="button" class="secondary">Fechar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="../scripts/modal.js" defer></script>
   <script src="../scripts/main-course.js" defer></script>
 </body>
 

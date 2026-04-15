@@ -6,6 +6,10 @@
   padding: 20px;
   box-shadow: var(--shadow);
   animation: reveal-up 0.4s ease;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .modal-panel:not([open]) {

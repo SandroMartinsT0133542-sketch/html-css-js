@@ -14,6 +14,15 @@
 }
 
 @media (max-width: 620px) {
+  .nav-links {
+    width: 100%;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
   .intro-grid,
   .risk-grid,
   .stats-grid,
