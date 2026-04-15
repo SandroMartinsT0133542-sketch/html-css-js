@@ -5,11 +5,24 @@
   border: none;
   padding: 20px;
   box-shadow: var(--shadow);
-  animation: reveal-up 0.4s ease;
+  animation: modal-reveal-up 0.4s ease;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1001;
+}
+
+@keyframes modal-reveal-up {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -46%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .modal-panel:not([open]) {

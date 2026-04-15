@@ -21,7 +21,7 @@ function getFeedback(percent) {
   if (percent >= 50) {
     return "Bom resultado. Rever o crash course pode aumentar a tua seguranca.";
   }
-  return "Precisas de reforcar os conceitos. Faz o crash course e tenta novamente.";
+  return "Precisas de reforçar os conceitos. Faz o crash course e tenta novamente.";
 }
 
 function renderQuestion() {
