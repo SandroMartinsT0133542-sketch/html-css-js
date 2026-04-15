@@ -4,61 +4,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>00622 - CET</title>
+  <title>Ciberseguranca no Dia a Dia</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="scripts/form.js" defer></script>
+
 </head>
 
 <body>
-  <a class="skip-link" href="#main-content">Saltar para o conteúdo principal</a>
+  <a class="skip-link" href="#main-content">Saltar para o conteudo principal</a>
+  <nav class="site-nav" aria-label="Navegacao principal">
+    <a class="brand" href="index.html">UC00622 - HTML </a>
+    <ul class="nav-links">
+      <li><a class="active" href="index.html">Inicio</a></li>
+      <li><a href="/pages/course.html">Crash Course</a></li>
+      <li><a href="/pages/tester.html">Test your credentials</a></li>
+      <li><a href="/pages/quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
 
-  <header role="banner">
-    <h1 id="main-title">HTML, CSS, JavaScript</h1>
+  <header class="hero" role="banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 id="main-title">Ciberseguranca no dia a dia</h1>
+      <p class="author">Sandro Martins</p>
+      <p class="hero-text">
+        Introducao rapida com riscos reais, boas praticas e acesso ao course, tester e quiz interativo.
+      </p>
+      <div class="hero-actions">
+        <a class="cta-link" href="/pages/course.html">Comecar crash course</a>
+        <button id="btn-start-quiz" type="button">Entrar no quiz</button>
+      </div>
+    </div>
+
   </header>
 
   <main id="main-content" tabindex="-1">
-    <section class="intro">
-      <p>Bem-vindo ao formulário de HTML, CSS e JavaScript.</p>
+    <section class="content-block intro-grid">
+      <article>
+        <h2>Porque este tema importa?</h2>
+        <p>
+          A ciberseguranca ja nao e apenas uma preocupacao de empresas. Qualquer pessoa pode ser alvo
+          de ataques digitais no telemovel, no email ou nas redes sociais.
+        </p>
+        <p class="muted">Objetivo: identificar riscos reais e aprender boas praticas.</p>
+      </article>
+      <figure class="illustration-card">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80"
+          alt="Pessoa a analisar informacao de seguranca num ecra" />
+        <figcaption>Seguranca digital comeca em pequenas decisoes do dia a dia.</figcaption>
+      </figure>
     </section>
 
-    <section class="form-section">
-      <h2>Ficha de preferências do utilizador</h2>
-      <form id="form" novalidate aria-describedby="form-hint">
-        <p id="form-hint" class="hint-text">Os campos Nome e Estação do ano são obrigatórios.</p>
-        <div class="field">
-          <label for="name">Nome:</label>
-          <input type="text" id="name" name="name" placeholder="O teu nome" autocomplete="name" required
-            aria-required="true" />
-        </div>
-        <div class="field">
-          <label for="season">Estação do ano:</label>
-          <select id="season" name="season" required aria-required="true">
-            <option value="" selected disabled>Seleciona</option>
-            <option value="verao">Verão</option>
-            <option value="inverno">Inverno</option>
-            <option value="primavera">Primavera</option>
-            <option value="outono">Outono</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="age">Idade:</label>
-          <input type="number" id="age" name="age" placeholder="A tua idade" min="1" max="120" inputmode="numeric" />
-        </div>
-        <div class="actions">
-          <button type="submit">Mostrar dados</button>
-          <button id="btn-clear" type="button">Limpar</button>
-          <button id="btn-style" type="button">Alterar estilo</button>
-        </div>
-      </form>
+    <section class="content-block">
+      <h2>Riscos mais comuns</h2>
+      <div class="risk-grid">
+        <article class="risk-card danger">
+          <h3>Phishing <span class="info-tip" tabindex="0"
+              data-tip="Emails falsos que tentam roubar dados com urgencia.">i</span></h3>
+          <p>Mensagens falsas com links para paginas que imitam bancos, lojas ou redes sociais.</p>
+        </article>
+        <article class="risk-card medium">
+          <h3>Passwords fracas <span class="info-tip" tabindex="0"
+              data-tip="Passwords curtas ou previsiveis sao quebradas rapidamente.">i</span></h3>
+          <p>Sequencias como 123456 e datas de nascimento continuam entre as mais exploradas.</p>
+        </article>
+        <article class="risk-card caution">
+          <h3>Wi-Fi publico <span class="info-tip" tabindex="0"
+              data-tip="Evita logins sensiveis em redes abertas sem protecao.">i</span></h3>
+          <p>Redes abertas podem expor sessoes, especialmente sem HTTPS ou VPN.</p>
+        </article>
+      </div>
+    </section>
 
-      <div id="message" class="message hidden" role="status" aria-live="polite" aria-atomic="true" tabindex="-1">
+    <section class="content-block">
+      <h2>Acesso rapido</h2>
+      <div class="cards-grid">
+        <article class="stat-box">
+          <h3>Crash Course</h3>
+          <p>Resumo de conceitos fundamentais em poucos minutos.</p>
+          <a class="cta-link" href="/pages/course.html">Ir para course</a>
+        </article>
+        <article class="stat-box">
+          <h3>Test your credentials</h3>
+          <p>Ferramenta educativa para avaliar forca de password.</p>
+          <a class="cta-link" href="/pages/tester.html">Abrir tester</a>
+        </article>
+        <article class="stat-box">
+          <h3>Quiz interativo</h3>
+          <p>10 perguntas aleatorias e resultado final em 10.</p>
+          <button id="btn-start-quiz-bottom" type="button">Comecar quiz</button>
+        </article>
       </div>
     </section>
   </main>
 
+  <dialog id="quiz-gate-modal" class="modal-panel" aria-modal="true" aria-labelledby="quiz-gate-title">
+    <div class="modal-content">
+      <h2 id="quiz-gate-title">Antes do quiz</h2>
+      <p>Queres fazer primeiro o crash course rapido para rever os conceitos principais?</p>
+      <div class="actions">
+        <button id="btn-course-first" type="button">Sim, ir para course</button>
+        <button id="btn-quiz-now" type="button">Ir direto para quiz</button>
+        <button id="btn-close-gate" type="button" class="secondary">Fechar</button>
+      </div>
+    </div>
+  </dialog>
+
   <footer role="contentinfo">
-    <p>&copy; 2026 Sandro Martins - ATEC TPSI</p>
+    <p>&copy; 2026 Sandro Martins | Ciberseguranca no dia a dia</p>
   </footer>
+
+  <script src="scripts/modal.js" defer></script>
+  <script src="scripts/main.js" defer></script>
 </body>
 
 </html>

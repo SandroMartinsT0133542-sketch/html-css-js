@@ -1,0 +1,37 @@
+.strength-wrap {
+  margin-top: 12px;
+}
+
+.strength-bar {
+  margin-top: 6px;
+  height: 10px;
+  background: #e6edf7;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#strength-fill {
+  width: 20%;
+  height: 100%;
+  background: #b00020;
+  transition: width 0.2s ease;
+}
+
+.criteria-list {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.criteria-list li {
+  list-style: none;
+  background: #fff4e8;
+  border-left: 5px solid #b7791f;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.criteria-list li.ok {
+  background: #e6f7ef;
+  border-left-color: #2f8f6b;
+}

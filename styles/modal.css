@@ -1,0 +1,25 @@
+.modal-panel {
+  width: min(520px, 94vw);
+  background: #fff;
+  border-radius: 12px;
+  border: none;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  animation: reveal-up 0.4s ease;
+}
+
+.modal-panel:not([open]) {
+  display: none;
+}
+
+.modal-panel::backdrop {
+  background: rgba(12, 22, 33, 0.64);
+}
+
+.modal-content {
+  display: block;
+}
+
+.modal-panel ol {
+  margin: 10px 0 16px 18px;
+}

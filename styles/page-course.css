@@ -1,0 +1,23 @@
+.small-hero {
+  min-height: 260px;
+}
+
+.course-checklist {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.course-checklist label {
+  background: #f4f8ff;
+  border: 1px solid #dce5f0;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.centered-block {
+  text-align: center;
+}

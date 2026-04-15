@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test your credentials</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Saltar para o conteudo principal</a>
+
+  <nav class="site-nav" aria-label="Navegacao principal">
+    <a class="brand" href="../index.html">UC00622 - HTML</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../pages/course.html">Crash Course</a></li>
+      <li><a class="active" href="../pages/tester.html">Test your credentials</a></li>
+      <li><a href="../pages/quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero small-hero" role="banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 id="main-title">Test your credentials</h1>
+      <p class="hero-text">Verificador educativo de forca de password (nada e guardado).</p>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="content-block">
+      <h2>Verificador rapido</h2>
+      <div class="field">
+        <label for="password-input">Escreve uma password de teste:</label>
+        <input id="password-input" type="password" autocomplete="off" placeholder="Exemplo: MySafePass!2026" />
+      </div>
+
+      <div class="strength-wrap" aria-live="polite">
+        <p>Nivel: <strong id="strength-label">Muito fraca</strong></p>
+        <div class="strength-bar">
+          <div id="strength-fill"></div>
+        </div>
+      </div>
+
+      <ul id="criteria-list" class="criteria-list">
+        <li data-rule="length">Minimo de 12 caracteres</li>
+        <li data-rule="upper">Pelo menos uma letra maiuscula</li>
+        <li data-rule="lower">Pelo menos uma letra minuscula</li>
+        <li data-rule="number">Pelo menos um numero</li>
+        <li data-rule="symbol">Pelo menos um simbolo</li>
+      </ul>
+    </section>
+
+    <section class="content-block centered-block">
+      <h2>Proximo passo</h2>
+      <a class="cta-link" href="quiz.html">Fazer quiz</a>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026 Sandro Martins | Test your credentials</p>
+  </footer>
+
+  <script src="scripts/main-tester.js" defer></script>
+</body>
+
+</html>

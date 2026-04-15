@@ -1,0 +1,14 @@
+:root {
+  --bg-start: #f9f5ec;
+  --bg-end: #e8f1ff;
+  --card: #ffffff;
+  --ink: #1a2330;
+  --muted: #576172;
+  --primary: #114c8a;
+  --primary-dark: #0a345f;
+  --accent: #ff7b54;
+  --good: #2f8f6b;
+  --warn: #b7791f;
+  --bad: #b00020;
+  --shadow: 0 10px 30px rgba(26, 35, 48, 0.14);
+}

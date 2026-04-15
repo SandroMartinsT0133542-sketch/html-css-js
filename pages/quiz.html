@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz | Ciberseguranca</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Saltar para o conteudo principal</a>
+
+  <nav class="site-nav" aria-label="Navegacao principal">
+    <a class="brand" href="../index.html">UC00622 - HTML</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../pages/course.html">Crash Course</a></li>
+      <li><a href="../pages/tester.html">Test your credentials</a></li>
+      <li><a class="active" href="../pages/quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero small-hero" role="banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 id="main-title">Quiz interativo de ciberseguranca</h1>
+      <p class="hero-text">10 perguntas aleatorias com resultado final em 10.</p>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="content-block" id="quiz-panel">
+      <div class="quiz-header-row">
+        <p>Pergunta <strong id="quiz-position">1</strong>/10</p>
+        <p>Score atual: <strong id="quiz-score">0</strong></p>
+      </div>
+      <div class="quiz-progress-bar">
+        <div id="quiz-progress-fill"></div>
+      </div>
+      <h2 id="question-text"></h2>
+      <div id="options-container" class="quiz-options"></div>
+      <div class="actions">
+        <button id="btn-next-question" type="button" disabled>Proxima</button>
+      </div>
+    </section>
+
+    <section class="content-block hidden" id="quiz-result-panel">
+      <h2>Resultado final</h2>
+      <p class="score-line">Pontuacao: <strong id="final-score">0/10</strong></p>
+      <p class="score-line">Percentagem: <strong id="final-percent">0%</strong></p>
+      <p id="final-feedback"></p>
+      <div class="actions">
+        <button id="btn-restart-quiz" type="button">Tentar novamente</button>
+        <a class="cta-link" href="../pages/course.html">Rever crash course</a>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026 Sandro Martins | Quiz 10/10</p>
+  </footer>
+
+  <script src="scripts/quiz-data.js" defer></script>
+  <script src="scripts/quiz-engine.js" defer></script>
+  <script src="scripts/main-quiz.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crash Course | Ciberseguranca</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Saltar para o conteudo principal</a>
+
+  <nav class="site-nav" aria-label="Navegacao principal">
+    <a class="brand" href="../index.html">UC00622 - HTML</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a class="active" href="../pages/course.html">Crash Course</a></li>
+      <li><a href="../pages/tester.html">Test your credentials</a></li>
+      <li><a href="../pages/quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero small-hero" role="banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 id="main-title">Fundamentos em 5 minutos</h1>
+      <p class="hero-text">Le os topicos e marca os que ja dominas antes de iniciar o quiz.</p>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="content-block">
+      <h2>Checklist de aprendizagem</h2>
+      <p class="hint-text">Progresso: <strong id="course-progress">0/6</strong></p>
+      <div class="course-checklist">
+        <label><input class="course-check" type="checkbox" /> Reconhecer sinais de phishing.</label>
+        <label><input class="course-check" type="checkbox" /> Criar passwords longas e unicas.</label>
+        <label><input class="course-check" type="checkbox" /> Ativar autenticacao de dois fatores.</label>
+        <label><input class="course-check" type="checkbox" /> Atualizar apps e sistema operativo.</label>
+        <label><input class="course-check" type="checkbox" /> Evitar logins em Wi-Fi publico.</label>
+        <label><input class="course-check" type="checkbox" /> Confirmar URLs antes de inserir dados.</label>
+      </div>
+    </section>
+
+    <section class="content-block cards-grid">
+      <article class="stat-box">
+        <h3>Phishing</h3>
+        <p>Confirma remetente, dominio e tom de urgencia antes de clicar em links.</p>
+      </article>
+      <article class="stat-box">
+        <h3>Passwords</h3>
+        <p>Usa frases longas, simbolos e um gestor de passwords quando possivel.</p>
+      </article>
+      <article class="stat-box">
+        <h3>Boa pratica diaria</h3>
+        <p>Desconfia, verifica e so depois partilha dados pessoais.</p>
+      </article>
+    </section>
+
+    <section class="content-block centered-block">
+      <h2>Pronto para testar?</h2>
+      <a class="cta-link" href="../pages/quiz.html">Ir para Quiz</a>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026 Sandro Martins | Crash Course</p>
+  </footer>
+
+  <script src="scripts/main-course.js" defer></script>
+</body>
+
+</html>
