@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Ciberseguranca no Dia a Dia</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../styles/page-contact.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Saltar para o conteudo principal</a>
+  <nav class="site-nav" aria-label="Navegacao principal">
+    <a class="brand" href="../index.html">UC00622 - HTML </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="course.html">Crash Course</a></li>
+      <li><a href="tester.html">Testar credenciais</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a class="active" href="contact.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-content">
+      <h1>Entre em Contacto</h1>
+      <p class="page-subtitle">Envie-nos uma mensagem e responderemos em breve.</p>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="contact-form-wrapper">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Nome Completo *</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome completo" required />
+              <span class="error-message" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="seu.email@example.com" required />
+              <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Assunto *</label>
+              <select id="subject" name="subject" required>
+                <option value="">-- Selecione um assunto --</option>
+                <option value="duvida">Dúvida</option>
+                <option value="feedback">Feedback</option>
+                <option value="problema">Problema técnico</option>
+                <option value="outro">Outro</option>
+              </select>
+              <span class="error-message" id="subject-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensagem *</label>
+              <textarea id="message" name="message" rows="6" placeholder="Escreva sua mensagem aqui..."
+                required></textarea>
+              <span class="error-message" id="message-error"></span>
+              <span class="char-counter"><span id="char-count">0</span>/500</span>
+            </div>
+
+            <div class="form-group checkbox">
+              <input type="checkbox" id="consent" name="consent" required />
+              <label for="consent">Consinto no tratamento dos meus dados *</label>
+              <span class="error-message" id="consent-error"></span>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar Mensagem</button>
+          </form>
+
+          <!-- Success message -->
+          <div id="success-message" class="success-message hidden">
+            <div class="success-content">
+              <svg class="success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+              <h2>Mensagem Enviada com Sucesso!</h2>
+              <p>Obrigado pelo seu contacto. Responderemos em breve.</p>
+              <button type="button" id="btn-send-another" class="btn-secondary">Enviar outra mensagem</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info section -->
+        <aside class="contact-info">
+          <div class="info-card">
+            <h3>Informações Úteis</h3>
+            <ul>
+              <li>Resposta esperada em 24-48 horas</li>
+              <li>Suporte máximo em português</li>
+              <li>Dados completamente seguros</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 UC00622 - Ciberseguranca no Dia a Dia. Todos direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../scripts/modal.js"></script>
+  <script src="../scripts/main-contact.js"></script>
+</body>
+
+</html>

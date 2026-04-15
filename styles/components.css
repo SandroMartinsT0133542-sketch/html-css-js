@@ -156,3 +156,96 @@
   font-weight: 700;
   margin-top: 4px;
 }
+
+.accordion {
+  margin-top: 14px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.accordion-trigger {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary, #3498db);
+  transition: color 0.2s ease;
+}
+
+.accordion-trigger:hover {
+  color: var(--accent, #9b59b6);
+  background: transparent;
+}
+
+.accordion-trigger:focus-visible {
+  outline: 2px solid var(--primary, #3498db);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.accordion-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.accordion-trigger.expanded .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  overflow: hidden;
+  animation: slideDown 0.3s ease-out;
+}
+
+.accordion-content[hidden] {
+  display: none;
+}
+
+.accordion-body {
+  padding: 12px 0 8px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.accordion-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accordion-body li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.accordion-body li::before {
+  content: "✓";
+  color: #27ae60;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}

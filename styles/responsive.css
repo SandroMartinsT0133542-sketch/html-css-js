@@ -8,19 +8,88 @@
   }
 
   .site-nav {
-    flex-direction: column;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 2%;
+  }
+
+  .brand {
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .nav-links {
+    width: 100%;
+    gap: 4px;
   }
 }
 
 @media (max-width: 620px) {
-  .nav-links {
-    width: 100%;
-    display: grid;
-    padding: 10px;
-    grid-template-columns: repeat(2, 1fr);
+  .hamburger-menu {
+    display: flex;
+    width: 40px;
+  }
+
+  .site-nav {
+    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 8px 4%;
+    gap: 10px;
+  }
+
+  .brand {
+    flex: 1;
+    width: auto;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #dce5f0;
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .nav-links.open {
+    max-height: 400px;
+    padding: 8px 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 16px;
+    border-radius: 0;
+    border-bottom: 1px solid #f0f0f0;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .nav-links a.active,
+  .nav-links a:hover {
+    background: #dcebff;
+    color: var(--primary-dark);
   }
 
   .intro-grid,
@@ -32,7 +101,12 @@
   }
 
   .hero {
-    min-height: 310px;
+    min-height: 280px;
+    padding: 16px;
+  }
+
+  .hero-content {
+    max-width: 100%;
   }
 
   .hero-actions,
@@ -42,15 +116,21 @@
     align-items: stretch;
   }
 
-  .nav-links {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
   button,
   select,
   input {
     width: 100%;
+  }
+
+  #main-title {
+    font-size: 1.6rem;
+  }
+
+  .author {
+    font-size: 0.9rem;
+  }
+
+  .hero-text {
+    font-size: 0.9rem;
   }
 }
