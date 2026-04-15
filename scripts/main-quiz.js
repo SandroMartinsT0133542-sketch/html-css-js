@@ -38,7 +38,7 @@ function renderQuestion() {
   current.options.forEach(function (option, index) {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "option-btn";
+    button.classList.add("option-btn");
     button.textContent = option;
 
     button.addEventListener("click", function () {
